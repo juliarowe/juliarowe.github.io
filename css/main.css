@@ -133,7 +133,6 @@ header {
   	width: -o-calc(100% - 120px);
   	width: calc(100% - 120px);
 	margin-right: 35px;
-	background-color: #cccccc; 
 }
 
 .ball {
@@ -158,4 +157,10 @@ header {
   	min-width: -webkit-calc(100% - 85px);
   	min-width: -o-calc(100% - 85px);
   	min-width: calc(100% - 85px);
+}
+
+p {
+	font-size: 50px;
+	text-align: center; 
+	color: #666666;
 }
