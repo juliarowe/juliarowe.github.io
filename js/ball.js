@@ -71,7 +71,7 @@ function ball() {
 	function updateUI() 
 	{
 		$('.ball').css({'width':width, 'height':height});
-		//$('.ball_text').css({'font-size':(height / 4), 
+		//$('.ball-text').css({'font-size':(height / 4), 
 		//					 'top':(height / 2 + height / 8)})
 	}
 

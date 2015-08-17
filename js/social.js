@@ -19,14 +19,14 @@ function socialList()
 		var social_content = '';
 		
 		for (var i in socialItems) {
-			social_content += "<li class = 'social_list_item'> <a href ="
+			social_content += "<li class = 'social-list-item'> <a href ="
 						   + socialItems[i].URL
-						   + "> <img class = 'social_icon' src = 'icons/"
+						   + "> <img class = 'social-icon' src = 'icons/"
 						   + socialItems[i].name
 						   + ".svg'> </a> </li>";
 		}
 	
-		$('#social_nav').append(social_content);
+		$('#social-nav').append(social_content);
 	}
 
 	construct();

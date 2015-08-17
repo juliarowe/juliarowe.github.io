@@ -20,25 +20,25 @@ function menu()
 		var menu_content = '';
 
 		for (var i in menuItems) {
-			menu_content += "<li class = 'menu_item'>" 
+			menu_content += "<li class = 'menu-item'>" 
 						 + menuItems[i].toUpperCase() 
 						 + "</li>";
 		}
 
-		$('#menu_list').append(menu_content);
+		$('#menu-list').append(menu_content);
 	}
 
 	function setListeners()
 	{
-		$('.menu_icon').on('click', function(e) {
-			$('#menu_list, #menu_but, #menu_close').toggleClass('disp_off');
-			$('#menu_list, #menu_but, #menu_close').toggleClass('disp_on');
+		$('.menu-icon').on('click', function(e) {
+			$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
+			$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
 
-			$('#menu').toggleClass('menu_hidden');
-			$('#menu').toggleClass('menu_shown');
+			$('#menu').toggleClass('menu-hidden');
+			$('#menu').toggleClass('menu-shown');
 		});
 
-//		$('.menu_item').on('click', //TODO: load that content)
+//		$('.menu-item').on('click', //TODO: load that content)
 	}
 
 	construct();

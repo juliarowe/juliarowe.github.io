@@ -36,8 +36,8 @@ $('body').ready(function(){
 
 function updateUI()
 {
-	var menu_width = $('#header_title').width();
-	$('#menu_list .menu_item').css('width', menu_width - 90);
+	var menu_width = $('#header-title').width();
+	$('#menu-list .menu-item').css('width', menu_width - 90);
 
 	//var content_width = $('#content').width();
 	//$('#content img').width(content_width - 80);
