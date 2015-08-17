@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<script src="jquery-2.1.0.js"></script>
+
+<script type="text/javascript">
+    function toggle(id) {
+    	hide_all();
+    	var el = document.getElementById(id);
+		if (el.style.display != 'none' ) {
+			el.style.display = 'none';
+		}
+		else {
+			el.style.display = '';
+		}
+    }
+</script>
+
+<script type="text/javascript">
+    function hide_all() {
+    	document.getElementById('aboutHome').style.display = 'none'
+    	document.getElementById('aboutDA').style.display = 'none'
+    	document.getElementById('aboutTufts').style.display = 'none'
+    	document.getElementById('aboutTravel').style.display = 'none' 
+   }
+</script>
+
+
+<head>
+<!--put all css files here (I think)-->	
+<link rel="stylesheet" type="text/css" href="about_theme.css">
+<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+</head>
+<body>
+<div id = "mainbody">	
+
+<div id = "header">
+	<div id = "left">
+		<img src="mono.png" alt = "JRB" width = "230" height = "213">
+	</div>
+
+	<div id = "right">
+		<ul class="head-img-list">
+			<li>
+				<img src="dems.jpg" width="80" height="80" >
+			</li>	
+			<li>
+				<img src="otheryoda.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="run.jpg" width="80" height="80" >
+			</li>
+			<li>
+				<img src="duckhat.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="deb.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="lake.jpg" width="80" height="80" >
+			</li>
+			<br style="line-height:0px;"/>
+			<li>
+				<img src="atl.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="marge.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="sunnies.jpg" width="80" height="80" >
+			</li>
+			<li>
+				<img src="yoda.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="christmas.jpg" width="80" height="80">
+			</li>
+			<li>
+				<img src="bats.jpg" width="80" height="80" >
+			</li>		
+		</ul>
+	</div>
+
+</div>
+
+<ul class = "menu">
+	<li><sup> . </sup></li>
+	<li> <a href="website.html"> home </a> </li>
+	<li><sup> . </sup></li>
+	<li> <a href="about.html"> about </a> </li>
+	<li><sup> . </sup></li>
+	<li> <a href="research.html"> research </a></li>
+	<li><sup> . </sup></li>
+	<li> <a href="contact.tml"> contact </a></li>
+	<li><sup> . </sup></li>
+	<li> <a href="resume.pdf"> resume </a></li>
+	<li><sup> . </sup></li>
+</ul>
+
+<ul class="img-list">
+	<li>
+		<a href="#aboutHome" onclick="toggle('aboutHome');">
+		<img src="NC.png" alt="North Carolina" width="200" height="200">
+		<span class="text-content"><span>North Carolina</span></span>
+		</a>
+	</li>
+	<li>
+		<a a href="#aboutDA" onclick="toggle('aboutDA');">
+		<img src="DA.png" alt="High School" width="200" height="200">
+		<span class="text-content"><span>Durham Academy</span></span>
+		</a>
+	</li>
+	<li>
+		<a a href="#aboutTufts" onclick="toggle('aboutTufts');">
+		<img src="Tufts.png" alt="Tufts University" width="200" height="200" >
+		<span class="text-content"><span>Tufts University</span></span>
+		</a>
+	</li>
+	<li>
+		<a a href="#aboutTravel" onclick="toggle('aboutTravel');">
+		<img src="swiss.jpg" alt="switzerland" width="200" height="200" border-radius = "150px">
+		<span class="text-content"><span>Travel</span></span>
+		</a>
+	</li>
+</ul>
+
+<p id = "aboutHome" style="display:none;">
+	heyyyyyyyy
+</p>
+
+<p id = "aboutDA"  style="display:none;">
+		In AP chemistry, my senior year of high school, I fell in love with the quantum mechanical model of the atom.  I read books targeting the general population, which both mystified and excited me even more.  I learned that the quantum realm falls into the field for physics, so I entered college intending to major in physics.  The completion of Introdution to Modern Physics has only strengthened my interest in quantum mechanics, and has led me to believe that my true interests lie in particle physics.  In addition to physics, I have recently found that I love computer science.  I am still fairly new to the subject, so I don't know where within the vast field my interests lie.  I have found that the two fields are complementary.  I am excited to combine the two in future research projects. 
+</p>
+
+<p id = "aboutTufts" style="display:none;">
+		T
+		U
+		F
+		T
+		S
+</p>
+<div id = "aboutTravel" style="display:none">
+	<p>
+		Italy
+		<br></br>
+		Switzerland
+	</p>
+</div>
+
+</div>
+</body>
+</html>

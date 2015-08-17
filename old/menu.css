@@ -1,0 +1,26 @@
+ul.menu{
+	background-color: #000000;
+	list-style-type: none;
+	font-family: "amatic";
+	font-size: 30px;
+	color: #ffffff;
+  	margin: 0;
+  	text-align: center;
+}
+
+ul.menu li {
+	display: inline-block; 
+	margin: 0 1.7em .25em 0;
+}
+
+ul.menu li a:link{
+	color:#ffffff; 
+	text-decoration: none;
+}
+ul.menu li a:visited{
+	color: #ffffff; 
+	text-decoration: none
+}
+ul.menu li a:hover{
+	color: chartreuse
+}
