@@ -1,0 +1,9 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g id="Layer1">
+        <circle cx="125" cy="125" r="120" style="fill:none;stroke-width:3px;stroke:black;"/>
+        <path d="M150.211,189.078C144.22,189.078 138.195,187.515 132.138,184.389C120.22,178.332 114.26,167.911 114.26,153.127L114.26,50.8418C114.26,49.6044 114.879,48.9857 116.116,48.9857C117.419,48.9857 118.07,49.6044 118.07,50.8418L118.07,83.0806L150.211,83.0806C151.514,83.0806 152.165,83.6993 152.165,84.9368C152.165,86.1742 151.514,86.793 150.211,86.793L118.07,86.793L118.07,153.127C118.07,166.413 123.281,175.726 133.701,181.067C139.042,183.867 144.545,185.268 150.211,185.268C151.514,185.268 152.165,185.919 152.165,187.222C152.165,188.459 151.514,189.078 150.211,189.078Z" style="fill:black;fill-rule:nonzero;"/>
+        <path d="M91.976,84.9308L115.88,84.9308" style="fill:none;stroke-width:3.8px;stroke:black;"/>
+    </g>
+</svg>

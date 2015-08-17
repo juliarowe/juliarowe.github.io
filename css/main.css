@@ -1,0 +1,161 @@
+body {
+	min-width: 550px;
+	margin: 0px;
+	font-family: 'Avenir Next LT Pro Ultra Light Condensed';
+	height: 100%;
+}
+
+.disp_off { display: none !important; }
+.disp_on { display: block; }
+.disp_on_inline { display: inline;}
+.disp_on_table {display: table;}
+.disp_on_table_cell {display: table-cell;}
+
+.no_scroll {overflow: none}
+
+header {
+	background-color: #ffffff;
+	z-index: 3;
+	position: fixed;
+	width: 100%;
+	height: 75px;
+}
+
+/* placeholder in case these items all need a similar style */
+.header_item {
+	display: inline-block;
+	vertical-align: middle;	
+}
+
+/*dynamically get the size */
+#header_title {
+	vertical-align: middle;
+	margin-top: 20px;
+	margin-left: 40px;
+	font-size: 50px;
+}
+
+#social_nav {
+	position: fixed;
+	top: 10px;
+	right: 1em;
+	float: right;
+	list-style-type: none;
+	padding-right: 10px;
+
+}
+
+.social_list_item {
+	font-size: 40px;
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.social_icon {
+	opacity: 0.6;
+	width: 35px;
+	height: 35px;
+}
+
+.social_icon:hover {
+	opacity: 1.0;
+}
+
+#menu {
+	position: fixed;
+	top: 75px;
+	float: left;
+	background:rgba(255,255,255,0.7); 
+	margin-left: 40px;
+	margin-top: 9px;
+	z-index: 10;
+}
+
+.menu_icon {
+	position: relative;
+	z-index: 10;
+	width:35px;
+	height:35px;
+	opacity: 0.5;
+	background: '#ffffff'
+}
+
+.menu_icon:hover {
+	opacity: 1.0;
+	cursor: pointer;
+	cursor: hand;
+}
+
+#menu_but {}
+
+#menu_close {}
+
+#menu_back {
+	position: absolute;
+	top: 84px;
+	left: 90px;
+	height: 25px;
+}
+
+#menu_list {
+	list-style-type: none;
+	padding: 0;
+}
+
+.menu_item {
+	font-size: 25px;
+	opacity: 0.5;
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+
+.menu_item:hover {
+	opacity: 0.7;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 30px;
+}
+
+#content {
+	float:left;
+	z-index: -1;
+	position: absolute;
+	top: 85px;
+	left: 85px;
+	height: -moz-calc(100% - 85px);
+	height: -webkit-calc(100% - 85px);
+  	height: -o-calc(100% - 85px);
+  	height: calc(100% - 85px);
+	
+	min-width: 510px;
+  	width: -moz-calc(100% - 120px);
+  	width: -webkit-calc(100% - 120px);
+  	width: -o-calc(100% - 120px);
+  	width: calc(100% - 120px);
+	margin-right: 35px;
+	background-color: #cccccc; 
+}
+
+.ball {
+	border-radius:50%;
+	background:#ffffff;
+	border: 1.5px solid #000000;
+	position: relative;
+}
+
+.ball_text {
+	text-align: center;
+	vertical-align: middle;
+}
+
+#content img{
+	width: auto;
+  	max-width: -moz-calc(100% - 85px);
+  	max-width: -webkit-calc(100% - 85px);
+  	max-width: -o-calc(100% - 85px);
+  	max-width: calc(100% - 85px);
+  	min-width: -moz-calc(100% - 85px);
+  	min-width: -webkit-calc(100% - 85px);
+  	min-width: -o-calc(100% - 85px);
+  	min-width: calc(100% - 85px);
+}
