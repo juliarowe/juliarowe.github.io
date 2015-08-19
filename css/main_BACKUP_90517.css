@@ -45,8 +45,14 @@ p {
 }
 
 .social-icon {
+<<<<<<< HEAD
+	opacity: 0.6;
 	width: 25px;
 	height: 25px;
+=======
+	width: 35px;
+	height: 35px;
+>>>>>>> 946ed2e... changed social list  hover functionality
 }
 
 #menu {

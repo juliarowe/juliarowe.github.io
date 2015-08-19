@@ -45,8 +45,13 @@ p {
 }
 
 .social-icon {
+	opacity: 0.6;
 	width: 25px;
 	height: 25px;
+}
+
+.social-icon:hover {
+	opacity: 1.0;
 }
 
 #menu {
