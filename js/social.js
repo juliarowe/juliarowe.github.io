@@ -31,15 +31,12 @@ function socialList()
 	}
 
 	function setListeners() { 
-		//$('#social-nav').hover(function() {
 		$('.social-list-item').hover(function() {
 			$('.social-list-item').css({ opacity: 0.6 });
 			$(this).css({ opacity: 1 });
 		}, function() {
 			$('.social-list-item').css({ opacity: 1 });
 		});
-		
-		//});
 	}
 
 	construct();
