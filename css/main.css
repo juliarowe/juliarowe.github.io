@@ -35,7 +35,9 @@ p {
 	display: block;
 	margin: auto;
 	list-style-type: none;
+	padding-right: 10px;
 }
+
 
 .social-list-item {
 	display: inline-block;
@@ -52,4 +54,13 @@ p {
 	opacity: 1.0;
 }
 
+#menu {
+	position: fixed;
+	top: 75px;
+	float: left;
+	background:rgba(255,255,255,0.7); 
+	margin-left: 40px;
+	margin-top: 9px;
+	z-index: 10;
+}
 
