@@ -17,10 +17,11 @@ function menu()
 
 	function generateContent()
 	{
-		var menu_content = '';
+		var menu_content='';
 
 		for (var i in menuItems) {
-			menu_content += "<li class = 'menu-item'>" 
+			menu_content += "<li class='menu-item' data-target='" 
+						 + menuItems[i].split(' ')[0] + "''>" 
 						 + menuItems[i].toUpperCase() 
 						 + "</li>";
 		}
@@ -30,15 +31,26 @@ function menu()
 
 	function setListeners()
 	{
-		$('.menu-icon').on('click', function(e) {
-			$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
-			$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
+		$('.menu-icon').on('click', toggleMenu);
 
-			$('#menu').toggleClass('menu-hidden');
-			$('#menu').toggleClass('menu-shown');
+		$('.menu-item').on('click', function() {
+			//clear the balls
+			funcObj[$(this).data('target')].loadContent();
+
+			$('#back').removeClass('disp_off');
+			$('#back').addClass('disp_on');
+
+			toggleMenu();
 		});
+	}
 
-//		$('.menu-item').on('click', //TODO: load that content)
+	function toggleMenu()
+	{
+		$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
+		$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
+
+		$('#menu').toggleClass('menu-hidden');
+		$('#menu').toggleClass('menu-shown');
 	}
 
 	construct();

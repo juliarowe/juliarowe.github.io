@@ -60,6 +60,7 @@ function readyFunction()
 {
 	funcObj['menu'] = new menu();
 	funcObj['social'] = new socialList();
+	funcObj['about'] = new aboutMe();
 	
 	setTimeout(function() {
 		funcObj['ball'] = new ball();
