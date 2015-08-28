@@ -147,6 +147,12 @@ header {
     height: calc(100% - 85px);
 }
 
+#frame {
+    width: 100%;
+    height: 100%;
+    overflow-y:scroll; 
+}
+
 .container-padded {
     left: 0px;
     width: -moz-calc(100% - 120px);
@@ -182,7 +188,7 @@ header {
     width: 80px;
     height: 80px;
 }
-
+/*
 .content-nav-item:hover .overlay{
     border-radius: 50%;
     width: 80px;
@@ -191,12 +197,21 @@ header {
     opacity: 0.5;
     position: absolute;
     top: 0;
+}*/
+
+.content-nav-item:hover {
+    opacity: 0.5;
+    cursor: pointer;
+    cursor: hand;
 }
 
 .content-nav-item:hover .content-menu-pic-txt {
     opacity: 1;
 }
 
+.content-nav-item:hover .content-menu-pic {
+    opacity: 0.5;
+}
 .content-nav-item > a {
     text-decoration: none;
 }
@@ -212,7 +227,7 @@ header {
     display: inline-block;
     position: absolute;
     left:0;
-    z-index: 10;
+    z-index: 100;
     color: #FFFEFD;
     font-size: 18px;
     text-decoration: none;
@@ -253,7 +268,6 @@ header {
 }
 
 #main-content{
-    background-color: #f7edf7;
     position: absolute;
     top: 80px;
     overflow-y: auto !important;
@@ -265,50 +279,32 @@ header {
     overflow-y: scroll;
 }
 
-
-#north_carolina:after {
-    position: absolute;
-    top:100;
-    background-color: #33ff55;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-
-    /*background-image: url(../backgrounds/brickwall.png);
-    opacity: 0.4;*/
-
+.about-me-title {
+    padding-top: 20px;
+    font-size: 24px;
 }
 
-/*#north_carolina img {
-    opacity: 0.5;
-}*/
+.about-me-text {
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+#north_carolina {
+    background-image: url(../backgrounds/north_carolina.png);
+}
 
 #durham_academy {
-    background-image: url(../backgrounds/concrete_seamless.png);
+    background-image: url(../backgrounds/durham_academy.png);
 }
 
 #tufts_university {
-    background-image: url(../backgrounds/halftone.png);
+    background-image: url(../backgrounds/tufts_university.png);
 }
 
 #travel {
-    background-image: url(../backgrounds/upfeathers.png);
+    background-image: url(../backgrounds/travel.png);
 }
 
-/*#about-content {
-    position: fixed;
-    top: 120px;
-    overflow: scroll;
-    height: -moz-calc(100% - 145px);
-    height: -webkit-calc(100% - 145px);
-    height: -o-calc(100% - 145px);
-    height: calc(100% - 145px); 
-}
-
-.about-contents {
-    position: relative;
-    padding: 30px 25px;
-}*/
 
 .photog-img {
     width: auto;
