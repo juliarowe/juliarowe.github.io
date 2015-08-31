@@ -115,6 +115,11 @@ header {
     height: 20px;
 }
 
+#back:hover {
+    cursor: hand;
+    cursor: pointer;
+}
+
 #menu-list {
     list-style-type: none;
     padding-top: 20px;
@@ -145,11 +150,17 @@ header {
     height: -webkit-calc(100% - 85px);
     height: -o-calc(100% - 85px);
     height: calc(100% - 85px);
+    overflow: scroll;
 }
 
 #frame {
+    position: absolute;
+    top: 85px;
     width: 100%;
-    height: 100%;
+    height: -moz-calc(100% - 85px);
+    height: -webkit-calc(100% - 85px);
+    height: -o-calc(100% - 85px);
+    height: calc(100% - 85px);
     overflow-y:scroll; 
 }
 
@@ -163,84 +174,6 @@ header {
     padding-left: 85px;
 }
 
-.content-menu {
-    position: fixed;
-    top: 75px;
-    background-color: #FFFEFD;
-    z-index: 5;
-    padding-bottom: 10px;
-}
-
-.content-nav {
-    display: block;
-    margin: auto;
-    text-align: center;
-    list-style-type: none;
-    padding: 0;
-}
-
-.content-nav-item {
-    display: inline-block;
-    position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-}
-/*
-.content-nav-item:hover .overlay{
-    border-radius: 50%;
-    width: 80px;
-    height: 80px;
-    background-color: #000000;
-    opacity: 0.5;
-    position: absolute;
-    top: 0;
-}*/
-
-.content-nav-item:hover {
-    opacity: 0.5;
-    cursor: pointer;
-    cursor: hand;
-}
-
-.content-nav-item:hover .content-menu-pic-txt {
-    opacity: 1;
-}
-
-.content-nav-item:hover .content-menu-pic {
-    opacity: 0.5;
-}
-.content-nav-item > a {
-    text-decoration: none;
-}
-
-.content-menu-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-}
-
-.content-menu-pic-txt {
-    margin: 0;
-    display: inline-block;
-    position: absolute;
-    left:0;
-    z-index: 100;
-    color: #FFFEFD;
-    font-size: 18px;
-    text-decoration: none;
-    width: 80px;
-    opacity: 0;
-}
-
-
-/*span.content-menu-pic-txt span {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-}*/
 
 .scrollspy-nav {
     position: fixed;
@@ -249,8 +182,8 @@ header {
     width: 100%;
     top: 75px;
     z-index: 1000;
-    font: 40px;
-    /* dynamically determine how to center */
+    font: 40px; */
+    /* dynamically determine how to center 
 }
 
 
@@ -272,39 +205,6 @@ header {
     top: 80px;
     overflow-y: auto !important;
 }
-
-.about-me-section {
-    position: relative;
-    padding:10px 40px;
-    overflow-y: scroll;
-}
-
-.about-me-title {
-    padding-top: 20px;
-    font-size: 24px;
-}
-
-.about-me-text {
-    padding-bottom: 20px;
-    font-size: 16px;
-}
-
-#north_carolina {
-    background-image: url(../backgrounds/north_carolina.png);
-}
-
-#durham_academy {
-    background-image: url(../backgrounds/durham_academy.png);
-}
-
-#tufts_university {
-    background-image: url(../backgrounds/tufts_university.png);
-}
-
-#travel {
-    background-image: url(../backgrounds/travel.png);
-}
-
 
 .photog-img {
     width: auto;

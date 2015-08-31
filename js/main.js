@@ -39,20 +39,20 @@ function updateUI()
 	var menu_width = $('#header-title').width();
 	$('#menu-list .menu-item').css('width', menu_width - 90);
 
-	//var content_width = $('#content').width();
-	//$('#content img').width(content_width - 80);
 }
 
 function setListeners() 
 {
 
-	$( window ).resize(function() 
+	$(window).resize(function() 
 	{
 		wWidth = $(window).width();
 		wHeight = $(window).height();
 		if (wWidth < 550) wWidth = 550;
 		funcObj['ball'].updateUI();
+	
 	});
+
 
 }
 
@@ -60,7 +60,6 @@ function readyFunction()
 {
 	funcObj['menu'] = new menu();
 	funcObj['social'] = new socialList();
-	funcObj['about'] = new aboutMe();
 	
 	setTimeout(function() {
 		funcObj['ball'] = new ball();

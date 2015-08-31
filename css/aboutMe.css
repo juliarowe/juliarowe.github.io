@@ -1,0 +1,134 @@
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Avenir Next LT Pro Ultra Light Condensed';
+    overflow-y: scroll; 
+    min-width: 670px !important;
+}
+
+#menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #FFFEFD;
+    z-index: 5;
+    padding-bottom: 10px;
+}
+
+.nav {
+    display: block;
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.nav-item:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.nav-item:hover .overlay{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+}
+
+.overlay.active{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+}
+
+.nav-item:hover .menu-pic-txt {
+    opacity: 1;
+}
+
+.menu-pic-txt.active {
+    opacity: 1;
+}
+
+.nav-item:hover .menu-pic {
+    opacity: 0.5;
+}
+
+.menu-pic.active {
+    opacity: 0.5;
+}
+
+.menu-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.menu-pic-txt {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    left:0;
+    z-index: 100;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    width: 80px;
+    opacity: 0;
+}
+
+#content {
+	position: absolute;
+	top: 96px;
+	left: 0;
+}
+
+.about-me-section {
+    position: relative;
+    padding:10px 40px;
+}
+
+.about-me-title {
+    padding-top: 20px;
+    font-size: 24px;
+}
+
+.about-me-text {
+    padding-bottom: 20px;
+    font-size: 16px;
+}
+
+#north_carolina {
+    background-image: url(../backgrounds/north_carolina.png);
+}
+
+#durham_academy {
+    background-image: url(../backgrounds/durham_academy.png);
+}
+
+#tufts_university {
+    background-image: url(../backgrounds/tufts_university.png);
+}
+
+#travel {
+    background-image: url(../backgrounds/travel.png);
+}

@@ -26,20 +26,20 @@ function socialList()
 						   + socialItems[i].name
 						   + ".svg'> </a> </li>";
 		}
-		social_content += "</ul>"
+		social_content += "</ul>";
 		$('#social-nav').append(social_content);
 	}
 
-	function setListeners() { 
-		//$('#social-nav').hover(function() {
-		$('.social-list-item').hover(function() {
+	function setListeners() 
+	{ 
+		$('.social-list-item').hover(function() 
+		{
 			$('.social-list-item').css({ opacity: 0.6 });
 			$(this).css({ opacity: 1 });
-		}, function() {
+		}, function() 
+		{
 			$('.social-list-item').css({ opacity: 1 });
 		});
-		
-		//});
 	}
 
 	construct();
