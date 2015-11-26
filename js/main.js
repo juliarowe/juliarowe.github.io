@@ -43,6 +43,7 @@ function updateUI()
 function readyFunction()
 {
 	funcObj['menu'] = new menu();
+	funcObj['main_menu'] = new mainMenu();
 	funcObj['social'] = new socialList();
 	
 }

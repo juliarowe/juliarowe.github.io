@@ -34,6 +34,7 @@ header {
     z-index: 3;
     height: 75px;
     padding-top: 10px;
+    background-color: #ffffff;
 }
 
 #header-title {
@@ -87,10 +88,9 @@ header {
 
 /* CONTENT */
 #content {
-    position: relative;;
     float:left;
     z-index: -1;
-    top: 85px;
+    padding-top: 85px;
     width: 100%;
     height: -moz-calc(100% - 85px);
     height: -webkit-calc(100% - 85px);
@@ -99,43 +99,73 @@ header {
     overflow: scroll;
 }
 
-#content-list {
-    font-size: 18px;
-    list-style-type: none;
+#main-menu {
+    top: 100px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+ul.main-menu {
+    padding-right: 40px;
+}
+.main-menu {
+    width: 95%;
     display: block;
     margin: auto;
-    padding: 0;
+    text-align: center;
+    list-style-type: none;
 }
 
-.content-list-item {
+.main-menu-item {
     display: inline-block;
     position: relative;
-    margin-left: 5%;
-    margin-right: 5%;
-    padding-bottom: 10px;
+    margin: 3%;
 }
 
-.content-pic {
-    width: 150px;
-    height: 150px;
+.main-menu-item:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.main-menu-item:hover .overlay{
     border-radius: 50%;
-    opacity: .6;
+    width: 200px;
+    height: 200px;
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
 }
 
-.content-pic:hover {
+
+.main-menu-item:hover .main-menu-text {
     opacity: 1;
 }
 
-.content-page {
-    text-decoration: none !important;
-    /*opacity: .6;*/
-    height: 100%;
+.main-menu-item:hover .main-menu-pic {
+    opacity: 0.5;
 }
-/*
-.content-page:hover {
-    opacity: 1;
-}*/
 
+.main-menu-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.main-menu-text {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    color: #FFFFFF;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: left;
+    width: 80%;
+    padding-left: 10%;
+}
 
 
 
