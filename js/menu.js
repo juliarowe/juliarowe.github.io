@@ -36,19 +36,8 @@ function menu()
 		$('.menu-item').on('click', function() {
 			//clear the balls
 			loadContent($(this).data('target'));
-
-			$('#back').removeClass('disp_off');
-			$('#back').addClass('disp_on');
-
 			toggleMenu();
 		});
-
-		$('#back').on('click', function() {
-			$('#back').removeClass('disp_on');
-			$('#back').addClass('disp_off');
-			$('#frame').attr({'src':''});
-			//add balls
-		})
 	}
 
 	function loadContent(target)
@@ -66,11 +55,14 @@ function menu()
 
 	function toggleMenu()
 	{
-		$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
-		$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
+		//$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
+		//$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
 
-		$('#menu').toggleClass('menu-hidden');
-		$('#menu').toggleClass('menu-shown');
+		$('#menu-list').toggleClass('disp_off');
+		$('#menu-list').toggleClass('disp_on');
+
+		//$('#menu').toggleClass('menu-hidden');
+		//$('#menu').toggleClass('menu-shown');
 	}
 
 	construct();

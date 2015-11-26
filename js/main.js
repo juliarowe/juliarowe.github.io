@@ -31,7 +31,6 @@ $('body').ready(function(){
 	
 	readyFunction();
 	updateUI();
-	setListeners();
 });
 
 function updateUI()
@@ -41,27 +40,9 @@ function updateUI()
 
 }
 
-function setListeners() 
-{
-
-	$(window).resize(function() 
-	{
-		wWidth = $(window).width();
-		wHeight = $(window).height();
-		if (wWidth < 550) wWidth = 550;
-		funcObj['ball'].updateUI();
-	
-	});
-
-
-}
-
 function readyFunction()
 {
 	funcObj['menu'] = new menu();
 	funcObj['social'] = new socialList();
 	
-	setTimeout(function() {
-		funcObj['ball'] = new ball();
-	}, 0);
 }
