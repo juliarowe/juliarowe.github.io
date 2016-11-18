@@ -9,14 +9,12 @@
 
 function menu() 
 {
-	function construct()
-	{
+	function construct() {
 		generateContent();
 		setListeners();
 	}
 
-	function generateContent()
-	{
+	function generateContent() {
 		var menu_content='';
 
 		for (var i in menuItems) {
@@ -29,8 +27,7 @@ function menu()
 		$('#menu-list').append(menu_content);
 	}
 
-	function setListeners()
-	{
+	function setListeners() {
 		$('.menu-icon').on('click', toggleMenu);
 
 		$('.menu-item').on('click', function() {
@@ -40,8 +37,7 @@ function menu()
 		});
 	}
 
-	function loadContent(target)
-	{
+	function loadContent(target) {
 		if (target == 'resume') {
 			//open resumme in new window
 		}
@@ -53,8 +49,7 @@ function menu()
 		}
 	}
 
-	function toggleMenu()
-	{
+	function toggleMenu() {
 		//$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
 		//$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
 
