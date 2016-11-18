@@ -27,23 +27,31 @@
 // graphic deisgn
 // contact	
 
-$('body').ready(function(){
-	
+$('body').ready(function(){	
 	readyFunction();
-	updateUI();
+  setListeners();
 });
 
-function updateUI()
-{
-	var menu_width = $('#header-title').width();
-	$('#menu-list .menu-item').css('width', menu_width - 90);
+function readyFunction() {
+	new menu();
+  new socialList();
 
+  funcObj['home']          = new mainMenu();
+  funcObj['aboutMe']       = new aboutMe();
+  funcObj['projects']      = new projects();
+  funcObj['graphicDesign'] = new photos();
+  funcObj['photography']   = new photos();
+
+  pages['aboutMe']       = new aboutMePage();
+  pages['projects']      = new projectsPage();
+  pages['graphicDesign'] = new photoPage();
+  pages['photography']   = new photoPage();
+
+  funcObj.home.generateContent
 }
 
-function readyFunction()
-{
-	funcObj['menu'] = new menu();
-	funcObj['main_menu'] = new mainMenu();
-	funcObj['social'] = new socialList();
-	
+function setListeners() {
+  $('#header-title').on('click', function() {
+    funcObj.home.generateContent;
+  });
 }
