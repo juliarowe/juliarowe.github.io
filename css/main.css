@@ -31,7 +31,7 @@ header {
     position: fixed;
     top: 0px;
     left: 0px;
-    z-index: 3;
+    z-index: 30;
     height: 75px;
     padding-top: 10px;
     background-color: #ffffff;
@@ -130,8 +130,8 @@ ul.main-menu {
 
 .main-menu-item:hover .overlay{
     border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     background-color: #000000;
     opacity: 0.1;
     position: absolute;
@@ -148,8 +148,8 @@ ul.main-menu {
 }
 
 .main-menu-pic {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
 }
 
@@ -158,9 +158,9 @@ ul.main-menu {
     display: inline-block;
     position: absolute;
     left: 0;
-    z-index: 100;
+    z-index: 10;
     color: #FFFFFF;
-    font-size: 31px;
+    font-size: 35px;
     text-decoration: none;
     text-align: left;
     width: 80%;
