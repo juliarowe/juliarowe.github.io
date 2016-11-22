@@ -28,26 +28,26 @@
 // contact	
 
 $('body').ready(function(){	
-	readyFunction();
+  readyFunction();
   setListeners();
 });
 
 function readyFunction() {
-	new menu();
+  new menu();
   new socialList();
 
   funcObj['home']          = new mainMenu();
   funcObj['aboutMe']       = new aboutMe();
   funcObj['projects']      = new projects();
-  funcObj['graphicDesign'] = new photos();
-  funcObj['photography']   = new photos();
+  // funcObj['graphicDesign'] = new photos();
+  // funcObj['photography']   = new photos();
 
   pages['aboutMe']       = new aboutMePage();
   pages['projects']      = new projectsPage();
-  pages['graphicDesign'] = new photoPage();
-  pages['photography']   = new photoPage();
+  // pages['graphicDesign'] = new photoPage();
+  // pages['photography']   = new photoPage();
 
-  funcObj.home.generateContent
+  funcObj.home.generateContent;
 }
 
 function setListeners() {
