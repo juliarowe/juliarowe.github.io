@@ -1,9 +1,112 @@
-html {
-    height: 100%;
+/* ABOUT ME */
+#about-me-menu {
+    padding-top: 10px;
+    position: fixed;
+    top: 85px;
+    left: 0px;
+    width: 100%;
+    min-width: 750px;
+    background-color: #FFFFFF;
+    z-index: 5;
+    padding-bottom: 10px;
 }
 
-body {
-    font-family: 'Avenir Next LT Pro Ultra Light Condensed';
-    overflow-y: scroll; 
-    min-width: 670px !important;
+.about-me-nav {
+    max-width: 1120px;
+    display: block;
+    margin: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-me-nav-item {
+    display: inline-block;
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.about-me-nav-item:hover {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.about-me-nav-item:hover .overlay{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+}
+
+.overlay.active{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #000000;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+}
+
+.about-me-nav-item:hover .about-me-menu-pic-txt {
+    opacity: 1;
+}
+
+.about-me-menu-pic-txt.active {
+    opacity: 1;
+}
+
+.about-me-nav-item:hover .about-me-menu-pic {
+    opacity: 0.5;
+}
+
+.about-me-menu-pic.active {
+    opacity: 0.5;
+}
+
+.about-me-menu-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.about-me-menu-pic-txt {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    left:0;
+    z-index: 100;
+    color: #FFFFFF;
+    font-size: 18px;
+    text-decoration: none;
+    width: 80px;
+    opacity: 0;
+}
+
+#about-me-content {
+    position: absolute;
+    top: 169px;
+    left: 0;
+}
+
+.about-me-section {
+    position: relative;
+    padding: 10px 15%;
+}
+
+.about-me-title {
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 24px;
+}
+
+.about-me-text {
+    font-size: 16px;
 }
