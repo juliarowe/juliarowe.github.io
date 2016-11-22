@@ -13,12 +13,12 @@ class mainMenu {
 		
 		for (var i in menuItems) {
 			content += "<li class='main-menu-item' data-item='"
-						  + menuItems[i].replace(' ', '') 
-				      + "'> <img class='main-menu-pic' src='images/"
-				      + menuItems[i].replace(' ', '_') 
-							+ ".jpg'> <div class = 'overlay'></div><p class='main-menu-text'>"
-							+ menuItems[i].toUpperCase() 
-							+ "</p> </a> </li>";
+			   	+ menuItems[i].replace(' ', '') 
+				+ "'> <img class='main-menu-pic' src='images/"
+				+ menuItems[i].replace(' ', '_') 
+				+ ".jpg'> <div class = 'overlay'></div><p class='main-menu-text'>"
+				+ menuItems[i].toUpperCase() 
+				+ "</p> </a> </li>";
 		}
 		content += "</ul></div>";
 
@@ -44,7 +44,7 @@ class mainMenu {
 
 	updateUI() {
 		var text_arr = $('.main-menu-text');
-		var len = text_arr.length
+		var len = text_arr.length;
 		var img_height = $('.main-menu-pic').height();
 
 		for (var i = 0; i < len; i++) {
