@@ -9,19 +9,17 @@
 
 function menu() 
 {
-	function construct()
-	{
+	function construct() {
 		generateContent();
 		setListeners();
 	}
 
-	function generateContent()
-	{
+	function generateContent() {
 		var menu_content='';
 
 		for (var i in menuItems) {
 			menu_content += "<li class='menu-item' data-target='" 
-						 + menuItems[i].replace(' ', '_') + "''>" 
+						 + menuItems[i].replace(' ', '') + "''>" 
 						 + menuItems[i].toUpperCase() 
 						 + "</li>";
 		}
@@ -29,32 +27,26 @@ function menu()
 		$('#menu-list').append(menu_content);
 	}
 
-	function setListeners()
-	{
+	function setListeners() {
 		$('.menu-icon').on('click', toggleMenu);
 
 		$('.menu-item').on('click', function() {
-			//clear the balls
-			loadContent($(this).data('target'));
+			var target = $(this).data('target');
+			
+			if (target == 'contact') {
+				$(location).attr('href', 'mailto:juliabrowe@gmail.com');
+			} else if (target == 'resume') {
+				window.open('pages/resume.pdf');
+			} else {
+				$('#menu').removeClass('hidden');
+				funcObj[target].loadPage;
+			}
 			toggleMenu();
 		});
 	}
 
-	function loadContent(target)
-	{
-		if (target == 'resume') {
-			//open resumme in new window
-		}
 
-		//load that page
-		else {
-			var page = 'pages/' + target + '.html';
-			$('#frame').attr({'src':page});
-		}
-	}
-
-	function toggleMenu()
-	{
+	function toggleMenu() {
 		//$('#menu-list, #menu-but, #menu-close').toggleClass('disp_off');
 		//$('#menu-list, #menu-but, #menu-close').toggleClass('disp_on');
 

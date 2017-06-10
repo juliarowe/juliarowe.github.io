@@ -27,23 +27,43 @@
 // graphic deisgn
 // contact	
 
-$('body').ready(function(){
-	
-	readyFunction();
-	updateUI();
+$(window).on('beforeunload', function() {
+   $(window).scrollTop(0);
 });
 
-function updateUI()
-{
-	var menu_width = $('#header-title').width();
-	$('#menu-list .menu-item').css('width', menu_width - 90);
+$('body').ready(function(){	
+  readyFunction();
+  setListeners();
+});
 
+function readyFunction() {
+  new menu();
+  new socialList();
+
+  funcObj['home']          = new mainMenu();
+  funcObj['aboutMe']       = new aboutMe();
+  funcObj['projects']      = new projects();
+  // funcObj['graphicDesign'] = new photos();
+  // funcObj['photography']   = new photos();
+
+  pages['aboutMe']       = new aboutMePage();
+  pages['projects']      = new projectsPage();
+  // pages['graphicDesign'] = new photoPage();
+  // pages['photography']   = new photoPage();
+
+  funcObj.home.generateContent;
 }
 
-function readyFunction()
-{
-	funcObj['menu'] = new menu();
-	funcObj['main_menu'] = new mainMenu();
-	funcObj['social'] = new socialList();
-	
+function setListeners() {
+  $(window).scroll(function() {
+    if (window.scrollY <= 15) {
+      $('header').removeClass('header_hidden');
+    }
+    else {
+      $('header').addClass('header_hidden'); 
+    }
+  });  
+  $('#header-title').on('click', function() {
+    funcObj.home.generateContent;
+  });
 }

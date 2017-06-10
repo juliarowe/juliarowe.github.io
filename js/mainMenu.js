@@ -7,57 +7,58 @@
 //	25/11/2015																//
 //////////////////////////////////////////////////////////////////////////////
 
-function mainMenu()
-{
-	function construct() 
-	{
-		generateContent();
-		//setListeners();
-		updateUI();
-	}
-
-	function generateContent()
-	{
+class mainMenu {
+	get generateContent() {
 		var content="<div id='main-menu'><ul class='main-menu'>";
 		
 		for (var i in menuItems) {
-			content += "<li class='main-menu-item'> <a href=pages/"
-					+ menuItems[i].replace(' ', '_') 
-				    + ".html> <img class='main-menu-pic' src='images/"
-				    + menuItems[i].replace(' ', '_') 
-					+ ".jpg'> <div class = 'overlay'></div><p class='main-menu-text'>"
-					+ menuItems[i].toUpperCase() 
-					+ "</p> </a> </li>";
+			content += "<li class='main-menu-item' data-item='"
+			   	+ menuItems[i].replace(' ', '') 
+				+ "'> <img class='main-menu-pic' src='images/"
+				+ menuItems[i].replace(' ', '_') 
+				+ ".jpg'> <div class = 'overlay'></div><p class='main-menu-text'>"
+				+ menuItems[i].toUpperCase() 
+				+ "</p> </a> </li>";
 		}
 		content += "</ul></div>";
 
-		$('#content').append(content);
+    $('#content')[0].innerHTML = content;
+		this.setListeners();
+		this.updateUI();
 	}
 
-	function setListeners() 
-	{ 
-		$('.main-menu-item').hover(function() 
-		{
-			$('.main-menu-item').css({ opacity: 0.6 });
-			$(this).css({ opacity: 1 });
-		}, function() 
-		{
-			$('.main-menu-item').css({ opacity: 1 });
+	setListeners() {
+		$('.main-menu-item').click(function() {
+			var target = $(this).data('item');
+			
+			if (target == 'contact') {
+				$(location).attr('href', 'mailto:juliabrowe@gmail.com');
+			} else if (target == 'resume') {
+				window.open('pages/resume.pdf');
+			} else {
+				$('#menu').removeClass('hidden');
+				$(window).scrollTop();
+		        $('header').removeClass('header_hidden');
+				$('#about-me-menu').removeClass('about_me_header_hidden');
+				funcObj[target].loadPage;
+			}
 		});
 	}
 
-	function updateUI()
-	{
+	updateUI() {
 		var text_arr = $('.main-menu-text');
-		var len = text_arr.length
+		var len = text_arr.length;
 		var img_height = $('.main-menu-pic').height();
 
 		for (var i = 0; i < len; i++) {
 			var text_height = $($('.main-menu-text')[i]).height();
 			var text_top = (img_height - text_height) / 2;
+			if (i == 0)
+				text_top = 81.5;
 			$($('.main-menu-text')[i]).css({'top':(text_top + 'px')});
 		}
-	}
 
-	construct();
+		$('#content').css({height:''});
+		$('#menu').addClass('hidden');
+	}
 }

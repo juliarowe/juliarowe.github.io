@@ -1,24 +1,24 @@
-html {
-    height: 100%;
-}
-
-body {
-    font-family: 'Avenir Next LT Pro Ultra Light Condensed';
-    overflow-y: scroll; 
-    min-width: 670px !important;
-}
-
-#menu {
+/* ABOUT ME */
+#about-me-menu {
+    padding-top: 10px;
     position: fixed;
-    top: 0px;
+    top: 80px;
     left: 0px;
     width: 100%;
+    min-width: 750px;
     background-color: #FFFFFF;
     z-index: 5;
     padding-bottom: 10px;
 }
 
-.nav {
+.about_me_header_hidden {
+    -webkit-transform: translateY( -68% );
+    -ms-transform: translateY( -68% );
+    transform: translateY( -68% );
+}
+
+.about-me-nav {
+    max-width: 1120px;
     display: block;
     margin: auto;
     text-align: center;
@@ -26,7 +26,7 @@ body {
     padding: 0;
 }
 
-.nav-item {
+.about-me-nav-item {
     display: inline-block;
     position: relative;
     margin-left: 5%;
@@ -36,12 +36,12 @@ body {
     height: 80px;
 }
 
-.nav-item:hover {
+.about-me-nav-item:hover {
     cursor: pointer;
     cursor: hand;
 }
 
-.nav-item:hover .overlay{
+.about-me-nav-item:hover .overlay{
     border-radius: 50%;
     width: 80px;
     height: 80px;
@@ -61,29 +61,29 @@ body {
     top: 0;
 }
 
-.nav-item:hover .menu-pic-txt {
+.about-me-nav-item:hover .about-me-menu-pic-txt {
     opacity: 1;
 }
 
-.menu-pic-txt.active {
+.about-me-menu-pic-txt.active {
     opacity: 1;
 }
 
-.nav-item:hover .menu-pic {
+.about-me-nav-item:hover .about-me-menu-pic {
     opacity: 0.5;
 }
 
-.menu-pic.active {
+.about-me-menu-pic.active {
     opacity: 0.5;
 }
 
-.menu-pic {
+.about-me-menu-pic {
     width: 80px;
     height: 80px;
     border-radius: 50%;
 }
 
-.menu-pic-txt {
+.about-me-menu-pic-txt {
     margin: 0;
     display: inline-block;
     position: absolute;
@@ -96,39 +96,23 @@ body {
     opacity: 0;
 }
 
-#content {
-	position: absolute;
-	top: 96px;
-	left: 0;
+#about-me-content {
+    position: absolute;
+    top: 169px;
+    left: 0;
 }
 
 .about-me-section {
     position: relative;
-    padding:10px 40px;
+    padding: 10px 15%;
 }
 
 .about-me-title {
-    padding-top: 20px;
+    padding-top: 15px;
+    padding-bottom: 5px;
     font-size: 24px;
 }
 
 .about-me-text {
-    padding-bottom: 20px;
     font-size: 16px;
-}
-
-#north_carolina {
-    background-image: url(../backgrounds/north_carolina.png);
-}
-
-#durham_academy {
-    background-image: url(../backgrounds/durham_academy.png);
-}
-
-#tufts_university {
-    background-image: url(../backgrounds/tufts_university.png);
-}
-
-#travel {
-    background-image: url(../backgrounds/travel.png);
 }
